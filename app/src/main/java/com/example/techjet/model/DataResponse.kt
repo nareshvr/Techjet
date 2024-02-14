@@ -8,3 +8,4 @@ data class DataResponse(
     val modified: String,
     val title: String
 )
+

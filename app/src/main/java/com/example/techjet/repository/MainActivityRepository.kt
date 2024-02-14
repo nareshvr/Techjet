@@ -7,6 +7,7 @@ import com.example.techjet.retrofit.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 object MainActivityRepository {
 
     val serviceSetterGetter = MutableLiveData<DataResponse>()
@@ -25,9 +26,8 @@ object MainActivityRepository {
                 call: Call<DataResponse>,
                 response: Response<DataResponse>
             ) {
-                // TODO("Not yet implemented")
-                Log.v("DEBUG : ", response.body().toString())
-                val data = response.body()
+                //Log.v("DEBUG : ", response.body().toString())
+
                 serviceSetterGetter.value = response.body()
             }
         })
